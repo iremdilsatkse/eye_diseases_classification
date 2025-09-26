@@ -1,10 +1,7 @@
-# eye_diseases_classification
-
 # Göz Hastalıkları Sınıflandırması CNN Projesi
 
 ## 📄 Proje Amacı
-Bu proje, fundus görüntülerinden göz hastalıklarının otomatik tespiti için 
-Convolutional Neural Network (CNN) kullanarak bir derin öğrenme modeli geliştirmeyi amaçlamaktadır.
+Bu proje, fundus görüntülerinden göz hastalıklarının otomatik tespiti için Convolutional Neural Network (CNN) kullanarak bir derin öğrenme modeli geliştirmeyi amaçlamaktadır.
 
 ## 📊 Veri Seti Hakkında
 - **Kaynak:** Kaggle - Eye Diseases Classification Dataset
@@ -21,16 +18,23 @@ Convolutional Neural Network (CNN) kullanarak bir derin öğrenme modeli gelişt
 - **Optimizasyon:** Adam Optimizer + Learning Rate Scheduling
 - **Görselleştirme:** Accuracy, Confusion Matrix, Classification Report
 
-## 📈 Elde Edilen Sonuçlar
-- **En Yüksek Validation Accuracy:** [ACCURACY]%
-- **En Düşük Validation Loss:** [LOSS]
-- **Model Boyutu:** [MODEL_SIZE] MB
-- **Eğitim Süresi:** [TRAINING_TIME] dakika
-
 ### Model Performansı
-| Sınıf | Precision | Recall | F1-Score |
-|-------|-----------|--------|----------|
-| ... | ... | ... | ... |
+Aşağıdaki tablo, modelin dört sınıftaki sınıflandırma performansını göstermektedir:
+
+| Hastalık / Sınıf       | Precision | Recall | F1-Score | Support |
+|-------------------------|-----------|--------|----------|---------|
+| Glaucoma                | 0.90      | 0.65   | 0.75     | 151     |
+| Normal                  | 0.76      | 0.96   | 0.85     | 161     |
+| Diabetic Retinopathy    | 0.99      | 0.99   | 0.99     | 165     |
+| Cataract                | 0.90      | 0.89   | 0.89     | 156     |
+| **Accuracy**            |           |        | **0.88** | **633** |
+| **Macro Avg.**          | 0.89      | 0.87   | 0.87     | 633     |
+| **Weighted Avg.**       | 0.89      | 0.88   | 0.87     | 633     |
+
+🔎 **Notlar:**
+- Modelin genel doğruluk (accuracy) değeri **%88**’dir.  
+- En yüksek başarı **Diabetic Retinopathy** sınıfında gözlemlenmiştir (F1-Score: **0.99**).  
+- **Glaucoma** sınıfında recall değerinin düşük olması, bazı vakaların yanlış sınıflandırıldığını göstermektedir.  
 
 ## 🔗 Kaggle Notebook Linki
-[Projenin Kaggle Notebook'u](KAGGLE_LINK_BURAYA)
+[Projenin Kaggle Notebook'u](https://www.kaggle.com/code/remdilatkse/eye-diseases-classification2)
